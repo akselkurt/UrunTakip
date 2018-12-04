@@ -1,0 +1,141 @@
+﻿@model UrunTakipFormu.Models.UrunBilgiInput
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<link href="~/Content/bootsrapstyle.css" rel="stylesheet" />
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            @using (Html.BeginForm("SampleIndex", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary()
+                <form class="form-horizontal" action="" method="post">
+
+                    <br />
+                    <br />
+                    <!-- Reçete No-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="QName">Reçete No:</label>
+                        <div class="col-md-9">
+                            @*<input id="QName" name="QName" type="text" placeholder="Reçete No" class="form-control">*@
+                            @Html.TextBoxFor(m => m.QName, new { @placeholder = "Reçete No", @type="text", @class= "form-control",@name= "QName",@id= "QName" }   )
+                        </div>
+                    </div>
+
+                    <!-- Tarih-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="Date">Tarih:</label>
+                        <div class="col-md-9">
+                            <input id="Date" name="Date" type="datetime" placeholder="Tarih" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- Müşteri Adı-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="CustomerName">Müşteri Adı:</label>
+                        <div class="col-md-9">
+                            <input id="CustomerName" name="CustomerName" type="text" placeholder="Müşteri Adı" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- Miktar-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="Amount">Miktar:</label>
+                        <div class="col-md-9">
+                            <input id="Amount" name="Amount" type="text" placeholder="Miktar" class="form-control">
+                        </div>
+                    </div>
+
+                    <!--Renk-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="Color">Renk:</label>
+                        <div class="col-md-9">
+                            <input id="Color" name="Color" type="text" placeholder="Renk" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- Kimyasallar-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="Chemical">Kimyasallar:</label>
+                        <div class="col-md-9">
+                            <input id="Chemical" name="Chemical" type="text" placeholder="Kimyasallar" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- Kimyasal Ürün Adı-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="ChemicalProduct">Kimyasal Ürün Adı:</label>
+                        <div class="col-md-9">
+                            <input id="ChemicalProduct" name="ChemicalProduct" type="text" placeholder="Kimyasal Ürün Adı" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- %CC/L veya q/L-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="Txt1">%CC/L veya q/L:</label>
+                        <div class="col-md-9">
+                            <input id="Txt1" name="Txt1" type="text" placeholder="%CC/L veya q/L" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- Yapılan İşlem-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="Processing">Yapılan İşlem:</label>
+                        <div class="col-md-9">
+                            <input id="Processing" name="Processing" type="text" placeholder="Yapılan İşlem" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- İşleme Girdiği Tarih-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="DateOfProcessing">İşleme Girdiği Tarih:</label>
+                        <div class="col-md-9">
+                            <input id="DateOfProcessing" name="DateOfProcessing" type="datetime" placeholder="İşleme Girdiği Tarih" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- İşlemden Çıktığı Tarih-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="EndProcessingDate">İşlemden Çıktığı Tarih:</label>
+                        <div class="col-md-9">
+                            <input id="EndProcessingDate" name="EndProcessingDate" type="datetime" placeholder="İşlemden Çıktığı Tarih:" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- Termin Tahmini Çıkacağı Tarih-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="Date2">Termin Tahmini Çıkacağı Tarih</label>
+                        <div class="col-md-9">
+                            <input id="Date2" name="Date2" type="datetime" placeholder="Termin Tahmini Çıkacağı Tarih" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- İlgilenen Usta-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="Manager">İlgilenen Usta </label>
+                        <div class="col-md-9">
+                            <input id="Manager" name="Manager" type="text" placeholder="İlgilenen Usta" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- Kaaydetme İşlemi -->
+                    <div class="form-group">
+                        <div class="col-md-12 text-right">
+                            <button type="submit" class="btn btn-primary btn-lg">Kaydet</button>
+
+                        </div>
+                    </div>
+
+                </form>
+            }
+        </div>
+    </div>
+
+</div>
