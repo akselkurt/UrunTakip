@@ -34,14 +34,23 @@ namespace UrunTakipFormu.Controllers
                 if (receteNo != "" && receteNo!=null )
                 {
                     var getProductAsync = await transactionRepo.GetProductAsync(receteNo);
-                    UrunBilgiInput UrunBilgiInput = new UrunBilgiInput
+                    if (getProductAsync != null && getProductAsync.Count!=0)
                     {
-                        QName = getProductAsync.FirstOrDefault().QName,
-                        Date = getProductAsync.FirstOrDefault().Date,
-                        EndProcessingDate = getProductAsync.FirstOrDefault().EndProcessingDate,
-                        Processing = getProductAsync.FirstOrDefault().Processing
-                    };
-                    return Json(UrunBilgiInput, JsonRequestBehavior.AllowGet);
+                        UrunBilgiInput UrunBilgiInput = new UrunBilgiInput
+                        {
+                            QName = getProductAsync.FirstOrDefault().QName,
+                            Date = getProductAsync.FirstOrDefault().Date,
+                            EndProcessingDate = getProductAsync.FirstOrDefault().EndProcessingDate,
+                            Processing = getProductAsync.FirstOrDefault().Processing,
+                            isSuccess = true
+                        };
+                        return Json(UrunBilgiInput, JsonRequestBehavior.AllowGet);
+                    }
+                    else
+                    {
+                        return Json(new { message = "Kayıtlı sonuç bulunamadı." }, JsonRequestBehavior.AllowGet);
+                    }
+                    
                 }
                 else
                 {

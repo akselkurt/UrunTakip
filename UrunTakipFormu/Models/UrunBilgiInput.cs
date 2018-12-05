@@ -23,5 +23,6 @@ namespace UrunTakipFormu.Models
         public string EndProcessingDate { get; set; }
         public string Date2 { get; set; }
         public string Manager { get; set; }
+        public bool isSuccess { get; set; }
     }
 }

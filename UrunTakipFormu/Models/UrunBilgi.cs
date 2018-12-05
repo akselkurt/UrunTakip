@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -8,6 +9,7 @@ namespace UrunTakipFormu.Models
     public class UrunBilgi
     {
         public int Id { get; set; }
+        [Required(ErrorMessage ="Reçete Numarası gereklidir, boş geçilemez.")]
         public string QName { get; set; }
         public string Date { get; set; }
         public string CustomerName { get; set; }
