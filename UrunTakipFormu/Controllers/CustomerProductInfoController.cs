@@ -19,10 +19,7 @@ namespace UrunTakipFormu.Controllers
         {
             this.transactionRepo = transactionRepo;
         }
-        public CustomerProductInfoController()
-        {
-
-        }
+      
         [HttpGet]
         public ActionResult Index()
         {

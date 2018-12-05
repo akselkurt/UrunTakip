@@ -21,10 +21,7 @@ namespace UrunTakipFormu.Controllers
         }
         
 
-        public FabricaLoginController()
-        {
-
-        }
+     
         LoginControl loginControl = LoginControl.GetInstance();
 
         [AllowAnonymous]
@@ -40,48 +37,48 @@ namespace UrunTakipFormu.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public async Task<ActionResult> Login(string personelName, string password)
+        public async Task<ActionResult> Login(string UserName, string password)
         {
  
             if (ModelState.IsValid)
             {
-                object[] LoginStatus = await userRepository.UserLogin(personelName, password);
+                object[] LoginStatus = await userRepository.UserLogin(UserName, password);
                 if (LoginStatus != null)
                 {
-                    FormsAuthentication.SetAuthCookie(personelName, false);
-                    if (object.Equals(LoginStatus[0], (object)1)) //rol id si 1 ise 
+                    FormsAuthentication.SetAuthCookie(UserName, false);
+                    if (object.Equals(LoginStatus[2], (object)1)) //rol id si 1 ise 
                     {
                         loginControl.IsAdmin = true;
                         loginControl.IsLogin = true;
                         loginControl.UserID = LoginStatus[1];
-                        loginControl.FullName = LoginStatus[2];
-                        return RedirectToAction("Index");
+                        loginControl.FullName = LoginStatus[0];
+                        return RedirectToAction("Index","PersonelUrunBilgi");
                     }
-                    else if (object.Equals(LoginStatus[0], (object)2)) // rol id si 2 ise 
+                    else if (object.Equals(LoginStatus[2], (object)2)) // rol id si 2 ise 
                     {
                         loginControl.IsAdmin = false;
                         loginControl.IsLogin = true;
                         loginControl.UserID = LoginStatus[1];
-                        loginControl.FullName = LoginStatus[2];
-                        return RedirectToAction("Index");
+                        loginControl.FullName = LoginStatus[0];
+                        return RedirectToAction("Index","CustomerProductInfo");
                     }
                     else
                     {
 
                         TempData["UserLoginFailed"] = "Giriş başarısız!";
-                        return View();
+                        return View("Index");
                     }
 
                 }
                 else
                 {
                     TempData["UserLoginFailed"] = "Giriş başarısız!Lütfen doğru kimlik bilgilerinizi giriniz.";
-                    return View();
+                    return View("Index");
                 }
             }
             else
             {
-                return View();
+                return View("Index");
             }
            
         }

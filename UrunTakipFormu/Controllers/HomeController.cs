@@ -20,8 +20,7 @@ namespace UrunTakipFormu.Controllers
             this.transactionRepo = transactionRepo;
         }
 
-        public HomeController()
-        { }
+       
         [HttpGet]
         public ActionResult Index()
         {
@@ -34,7 +33,7 @@ namespace UrunTakipFormu.Controllers
           
         }
         [HttpPost]
-        public ActionResult SampleIndex(UrunBilgiInput bilgi)
+        public async Task<ActionResult> SampleIndex(UrunBilgiInput bilgi)
         {
             try
             {

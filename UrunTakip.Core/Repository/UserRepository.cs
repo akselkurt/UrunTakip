@@ -8,13 +8,14 @@ using UrunTakip.Core.Models;
 
 namespace UrunTakip.Core.Repository
 {
-    public class UserRepository : Base<Users>, IUserRepository
+    public class UserRepository : Base<UserInfo>, IUserRepository
     {
         public UserRepository(MyContext context)
           : base(context)
         {
 
         }
+
         public async Task<object[]> UserLogin(string personelName, string password)
         {
             var userData = await dbSet.FirstOrDefaultAsync(x => x.PersonelName == personelName && x.Password == password);

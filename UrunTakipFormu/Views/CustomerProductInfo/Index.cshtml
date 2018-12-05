@@ -74,14 +74,21 @@
             dataType: 'json',
             success: function (result) {
                 console.log(result);
-                //if (result.isSucces) {
-                //    $("[name=firstdate]").val(result.firstdate);
-                //    $("[name=seconddate]").val(result.seconddate);
-                //    $("[name=processing]").val(result.processing);
-                //}
-                //else {
-                //    alert("Bilgiler bulunamadı!");
-                //}
+                debugger;
+                if (result.isSucces) {
+                    if (result.firstdate != null) {
+                        $("[name=firstdate]").val(result.firstdate);
+                    }
+                    if (result.seconddate != null) {
+                        $("[name=seconddate]").val(result.seconddate);
+                    }
+                    if (result.processing != null) {
+                        $("[name=processing]").val(result.processing);
+                    }
+                }
+                else {
+                    alert("Bilgiler bulunamadı!");
+                }
             },
             error: function () {
                 alert("başarısız");

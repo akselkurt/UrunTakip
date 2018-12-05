@@ -1,10 +1,14 @@
-﻿using System;
+﻿using Autofac;
+using Autofac.Integration.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using UrunTakip.Core;
+using UrunTakip.Core.Repository;
 
 namespace UrunTakipFormu
 {
@@ -13,9 +17,21 @@ namespace UrunTakipFormu
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            #region Configure DI
+            var builder = new ContainerBuilder();
+            builder.RegisterControllers(typeof(MvcApplication).Assembly).PropertiesAutowired();
+            builder.RegisterType<MyContext>().InstancePerLifetimeScope();
+            builder.RegisterType<Transaction>().As<ITransaction>();
+            builder.RegisterType<UserRepository>().As<IUserRepository>();
+            builder.RegisterFilterProvider();
+
+            var container = builder.Build();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+            #endregion
         }
     }
 }

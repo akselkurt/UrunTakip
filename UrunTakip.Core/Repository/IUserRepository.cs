@@ -7,7 +7,7 @@ using UrunTakip.Core.Models;
 
 namespace UrunTakip.Core.Repository
 {
-   public interface IUserRepository : IBase<Users>
+   public interface IUserRepository : IBase<UserInfo>
     {
         Task<object[]> UserLogin(string personelName, string password);
     }
