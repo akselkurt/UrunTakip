@@ -48,6 +48,7 @@ namespace UrunTakipFormu.Controllers
                     FormsAuthentication.SetAuthCookie(UserName, false);
                     if (object.Equals(LoginStatus[2], (object)1)) //rol id si 1 ise 
                     {
+                        ViewBag.IsAdmin = true;
                         loginControl.IsAdmin = true;
                         loginControl.IsLogin = true;
                         loginControl.UserID = LoginStatus[1];
@@ -56,6 +57,7 @@ namespace UrunTakipFormu.Controllers
                     }
                     else if (object.Equals(LoginStatus[2], (object)2)) // rol id si 2 ise 
                     {
+                        ViewBag.IsAdmin = false;
                         loginControl.IsAdmin = false;
                         loginControl.IsLogin = true;
                         loginControl.UserID = LoginStatus[1];

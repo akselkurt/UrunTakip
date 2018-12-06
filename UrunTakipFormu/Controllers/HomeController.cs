@@ -39,16 +39,23 @@ namespace UrunTakipFormu.Controllers
             {
                 if (bilgi.QName != null)
                 {
-                    SaveToDatabase(GetUrunBilgi(bilgi));
-                    TempData["Message"] = "<script>alert('Kayıt işlemi başarılı olarak gerçekleştirilmiştir.')</script>";
-                    return RedirectToAction("Index","PersonelUrunBilgi");
+                   var result= await SaveToDatabase(GetUrunBilgi(bilgi));
+                    if (result)
+                    {
+                        TempData["Message"] = "<script>alert('Kayıt işlemi başarılı olarak gerçekleştirilmiştir.')</script>";
+                        return RedirectToAction("Index", "PersonelUrunBilgi");
+                    }
+                    else
+                    {
+                        TempData["Message"] = "<script>alert('Kayıt işlemi gerçekleştirilemedi.')</script>";
+                        return RedirectToAction("Index", "PersonelUrunBilgi");
+                    }
                 }
                 else
                 {
                     TempData["Message"]= "<script>alert('Reçete numarası boş geçilemez.')</script>";
                     return RedirectToAction("Index","PersonelUrunBilgi");
                 }
-                
             }
             catch (Exception ex)
             {
@@ -57,7 +64,7 @@ namespace UrunTakipFormu.Controllers
             }
 
         }
-        private async void SaveToDatabase(UrunBilgi bilgi)
+        private async Task<bool> SaveToDatabase(UrunBilgi bilgi)
         {
             ProductsInfo productInfo = new ProductsInfo
             {
@@ -79,6 +86,11 @@ namespace UrunTakipFormu.Controllers
             var productInfoList = new List<ProductsInfo>();
             productInfoList.Add(productInfo);
             var repositoryResult = await transactionRepo.SaveProductAsync(productInfoList);
+            if (repositoryResult)
+            {
+                return true;
+            }
+            return false;
         }
         private UrunBilgi GetUrunBilgi(UrunBilgiInput bilgi)
         {

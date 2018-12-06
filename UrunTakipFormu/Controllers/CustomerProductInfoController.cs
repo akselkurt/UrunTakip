@@ -39,7 +39,7 @@ namespace UrunTakipFormu.Controllers
                         UrunBilgiInput UrunBilgiInput = new UrunBilgiInput
                         {
                             QName = getProductAsync.FirstOrDefault().QName,
-                            Date = getProductAsync.FirstOrDefault().Date,
+                            DateOfProcessing = getProductAsync.FirstOrDefault().DateOfProcessing,
                             EndProcessingDate = getProductAsync.FirstOrDefault().EndProcessingDate,
                             Processing = getProductAsync.FirstOrDefault().Processing,
                             isSuccess = true

@@ -30,9 +30,9 @@
                     <!-- İşleme Alındığı Tarih-->
                     <div class="form-group">
 
-                        <label class="col-md-3 control-label" for="date"> İşleme Alındığı Tarih:</label>
+                        <label class="col-md-3 control-label" for="date"> İşleme Girdiği Tarih:</label>
                         <div class="col-md-9">
-                            @Html.TextBoxFor(m => m.Date, new { @placeholder = "İşleme Alındığı Tarih", @readonly = true, @disabled = "disabled", @type = "text", @class = "form-control", @name = "firstdate", @id = "firstdate" })
+                            @Html.TextBoxFor(m => m.DateOfProcessing, new { @placeholder = "İşleme Girdiği Tarih", @readonly = true, @disabled = "disabled", @type = "text", @class = "form-control", @name = "firstdate", @id = "firstdate" })
                         </div>
                     </div>
 
@@ -75,11 +75,9 @@
             data: { receteno },
             dataType: 'json',
             success: function (result) {
-                console.log(result);
-                debugger;
                 if (result.isSuccess) {
                     if (result.DateOfProcessing != null) {
-                        $("[name=date]").val(result.DateOfProcessing);
+                        $("[name=DateOfProcessing]").val(result.DateOfProcessing);
                     }
                     if (result.EndProcessingDate != null) {
                         $("[name=EndProcessingDate]").val(result.EndProcessingDate);
