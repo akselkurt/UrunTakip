@@ -7,13 +7,13 @@ namespace UrunTakip.Core.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class userCreate : IMigrationMetadata
+    public sealed partial class a1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(userCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(a1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201812041301192_userCreate"; }
+            get { return "201812061143119_a1"; }
         }
         
         string IMigrationMetadata.Source
