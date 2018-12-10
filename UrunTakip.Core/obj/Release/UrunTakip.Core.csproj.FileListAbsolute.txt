@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\bin\Release\UrunTakip.Core.dll.config
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\bin\Release\UrunTakip.Core.dll
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\bin\Release\UrunTakip.Core.pdb
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\bin\Release\EntityFramework.dll
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\bin\Release\EntityFramework.xml
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Release\UrunTakip.Core.csprojAssemblyReference.cache
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Release\UrunTakip.Core.Migrations.a1.resources
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Release\UrunTakip.Core.csproj.GenerateResource.cache
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Release\UrunTakip.Core.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Release\UrunTakip.Core.csproj.CopyComplete
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Release\UrunTakip.Core.dll
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Release\UrunTakip.Core.pdb

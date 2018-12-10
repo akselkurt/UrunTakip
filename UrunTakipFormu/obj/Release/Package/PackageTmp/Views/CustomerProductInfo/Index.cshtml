@@ -1,0 +1,105 @@
+﻿@model UrunTakipFormu.Models.UrunBilgiInput
+@{
+    ViewBag.Title = "SampleIndex";
+    Layout = null;
+}
+
+@*<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">*@
+<link href="~/Content/bootsrapstyle.css" rel="stylesheet" />
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            @using (Html.BeginForm("GetProductAsync", "CustomerProductInfo"))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary()
+                <form class="form-horizontal" action="" method="post">
+                    @*  <fieldset style="margin-right:500px;">*@
+
+                    <!-- Reçete No-->
+                    <div class="form-group" style="margin-top:150px">
+                        <label class="col-md-3 control-label" for="qname">Reçete No:</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(m => m.QName, new { @placeholder = "Reçete No", @type = "text", @class = "form-control", @name = "customername", @id = "customername" })
+                        </div>
+                    </div>
+
+                    <!-- İşleme Alındığı Tarih-->
+                    <div class="form-group">
+
+                        <label class="col-md-3 control-label" for="date"> İşleme Girdiği Tarih:</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(m => m.DateOfProcessing, new { @placeholder = "İşleme Girdiği Tarih", @readonly = true, @disabled = "disabled", @type = "text", @class = "form-control", @name = "firstdate", @id = "firstdate" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="date"> İşlemden Çıktığı Tarih:</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(m => m.EndProcessingDate, new { @placeholder = "İşlemden Çıktığı Tarih", @readonly = true, @disabled="disabled", @type = "text", @class = "form-control", @name = "seconddate", @id = "seconddate" })
+                        </div>
+                    </div>
+
+                    <!-- Yapılan İşlem -->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="processing">Yapılan İşlem:</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(m => m.Processing, new { @placeholder = "İşlemden Çıktığı Tarih", @readonly = true, @disabled = "disabled", @type = "text", @class = "form-control", @name = "processing", @id = "processing" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 text-right">
+                            <button type="submit" class="btn btn-primary btn-lg" id="btnSorgula">Sorgula</button>
+                        </div>
+                    </div>
+                </form>
+            }
+
+         
+        </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+    function receteSorgula() {
+        var receteno = $("[id=customername]").val();
+
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("GetProductAsync", "CustomerProductInfo")',
+            data: { receteno },
+            dataType: 'json',
+            success: function (result) {
+                if (result.isSuccess) {
+                    if (result.DateOfProcessing != null) {
+                        $("[name=DateOfProcessing]").val(result.DateOfProcessing);
+                    }
+                    if (result.EndProcessingDate != null) {
+                        $("[name=EndProcessingDate]").val(result.EndProcessingDate);
+                    }
+                    if (result.Processing != null) {
+                        $("[name=Processing]").val(result.Processing);
+                    }
+                }
+                else {
+                    alert("Kayıtlı reçete no bulunamadı!");
+                }
+            },
+            error: function () {
+                alert("başarısız");
+            }
+        });
+    }
+
+    $(function () {
+        $("#btnSorgula").on("click", function (e) {
+            e.preventDefault();
+            receteSorgula();
+        });
+    });
+</script>

@@ -47,10 +47,11 @@ C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\bin\Debug\EntityFramework.dl
 C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\bin\Debug\EntityFramework.xml
 C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.csprojAssemblyReference.cache
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.Migrations.a1.resources
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.csproj.GenerateResource.cache
 C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.csproj.CopyComplete
 C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.dll
 C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.pdb
-C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.csprojAssemblyReference.cache
-C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.Migrations.a1.resources
-C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.csproj.GenerateResource.cache
+C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.Migrations.init.resources
