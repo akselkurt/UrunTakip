@@ -10,7 +10,7 @@ namespace UrunTakip.Core.Repository
 {
     public class Transaction : Base<ProductsInfo>, ITransaction
     {
-        public Transaction(MyContext context)
+        public Transaction(UrunTakipContext context)
             :base(context)
         {
 

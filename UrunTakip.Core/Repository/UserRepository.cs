@@ -10,7 +10,7 @@ namespace UrunTakip.Core.Repository
 {
     public class UserRepository : Base<UserInfo>, IUserRepository
     {
-        public UserRepository(MyContext context)
+        public UserRepository(UrunTakipContext context)
           : base(context)
         {
 

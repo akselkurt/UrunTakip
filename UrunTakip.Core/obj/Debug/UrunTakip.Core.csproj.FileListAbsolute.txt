@@ -56,3 +56,17 @@ C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.Mig
 C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.csproj.GenerateResource.cache
 C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.Migrations.a8888.resources
 C:\Users\user\Desktop\UrunTakipFormu\UrunTakip.Core\obj\Debug\UrunTakip.Core.Migrations.a88888.resources
+C:\Users\Hesapkurdu\Desktop\Aksel_UrunTakip\UrunTakip\UrunTakip.Core\obj\Debug\UrunTakip.Core.csprojAssemblyReference.cache
+C:\Users\Hesapkurdu\Desktop\Aksel_UrunTakip\UrunTakip\UrunTakip.Core\obj\Debug\UrunTakip.Core.dll
+C:\Users\Hesapkurdu\Desktop\Aksel_UrunTakip\UrunTakip\UrunTakip.Core\obj\Debug\UrunTakip.Core.pdb
+C:\Users\Hesapkurdu\Desktop\Aksel_UrunTakip\UrunTakip\UrunTakip.Core\bin\Debug\UrunTakip.Core.dll.config
+C:\Users\Hesapkurdu\Desktop\Aksel_UrunTakip\UrunTakip\UrunTakip.Core\bin\Debug\UrunTakip.Core.dll
+C:\Users\Hesapkurdu\Desktop\Aksel_UrunTakip\UrunTakip\UrunTakip.Core\bin\Debug\UrunTakip.Core.pdb
+C:\Users\Hesapkurdu\Desktop\Aksel_UrunTakip\UrunTakip\UrunTakip.Core\bin\Debug\EntityFramework.dll
+C:\Users\Hesapkurdu\Desktop\Aksel_UrunTakip\UrunTakip\UrunTakip.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hesapkurdu\Desktop\Aksel_UrunTakip\UrunTakip\UrunTakip.Core\bin\Debug\EntityFramework.xml
+C:\Users\Hesapkurdu\Desktop\Aksel_UrunTakip\UrunTakip\UrunTakip.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hesapkurdu\Desktop\Aksel_UrunTakip\UrunTakip\UrunTakip.Core\obj\Debug\UrunTakip.Core.csproj.CoreCompileInputs.cache
+C:\Users\Hesapkurdu\Desktop\Aksel_UrunTakip\UrunTakip\UrunTakip.Core\obj\Debug\UrunTakip.Core.csproj.CopyComplete
+C:\Users\Hesapkurdu\Desktop\Aksel_UrunTakip\UrunTakip\UrunTakip.Core\obj\Debug\UrunTakip.Core.Migrations.efcodefirstinit.resources
+C:\Users\Hesapkurdu\Desktop\Aksel_UrunTakip\UrunTakip\UrunTakip.Core\obj\Debug\UrunTakip.Core.csproj.GenerateResource.cache

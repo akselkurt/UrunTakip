@@ -8,11 +8,11 @@ using UrunTakip.Core.Models;
 
 namespace UrunTakip.Core
 {
-    public class MyContext: DbContext
+    public class UrunTakipContext : DbContext
     {
         //public IDbSet<ProductsInfo> ProductsInfo { get; set; }
         //public IDbSet<UserInfo> UserInfo { get; set; }
-        public MyContext() : base("UrunTakipContext")
+        public UrunTakipContext() : base("UrunTakipContext")
         {
             this.Database.CommandTimeout = 180;
         }
